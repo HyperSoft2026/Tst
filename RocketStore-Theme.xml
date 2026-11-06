@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'
+ xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+ xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width,initial-scale=1,minimum-scale=1' name='viewport'/>
+  <meta content='#071426' name='theme-color'/>
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+  <b:skin><![CDATA[
+    :root{--navy:#071426;--blue:#087BFF;--cyan:#00D8EE;--ink:#17263a;--muted:#68788d;--bg:#f3f7fc;--line:#e4ebf4}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+    a{color:var(--blue);text-decoration:none}.rs-header{position:sticky;top:0;z-index:99;background:rgba(7,20,38,.98);box-shadow:0 5px 22px #07142620;color:#fff}
+    .rs-head{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:18px}.rs-brand{font-size:24px;font-weight:950;color:#fff;white-space:nowrap}.rs-brand span{color:var(--cyan)}
+    .rs-nav{display:flex;gap:4px;margin-inline-start:auto}.rs-nav a,.rs-drawer a{color:#eaf5ff;padding:9px 11px;border-radius:10px;font-weight:750;font-size:14px}.rs-nav a:hover{background:#087bff35}
+    .rs-actions{display:flex;align-items:center;gap:8px}.rs-search{display:flex;background:#fff;border-radius:11px;overflow:hidden}.rs-search input{width:150px;min-width:0;border:0;padding:9px 10px;outline:0}.rs-search button{border:0;background:var(--blue);color:white;padding:0 13px;cursor:pointer}
+    .rs-lang,.rs-menu{background:transparent;color:#fff;border:1px solid #ffffff55;border-radius:10px;padding:8px 11px;cursor:pointer;font-weight:750}.rs-menu{display:none}
+    .rs-hero{max-width:1160px;margin:25px auto 20px;padding:0 20px}.rs-hero-inner{padding:48px 40px;border-radius:25px;color:#fff;background:radial-gradient(circle at 85% 10%,#00d8ee55,transparent 30%),linear-gradient(120deg,#071426,#0b3768 65%,#087bff);box-shadow:0 16px 40px #07142620}
+    .rs-tag{display:inline-block;border:1px solid #00d8ee70;background:#00d8ee18;color:#a5f8ff;border-radius:30px;padding:4px 12px;font-size:12px;font-weight:850;letter-spacing:.5px}
+    .rs-hero h1{font-size:clamp(27px,4vw,43px);line-height:1.25;color:white;margin:15px 0 8px}.rs-hero p{max-width:680px;color:#deedff;margin:0 0 20px}
+    .rs-cta{display:inline-block;padding:10px 18px;border-radius:11px;background:linear-gradient(90deg,var(--cyan),#69baff);color:#061a30;font-weight:900}
+    .rs-cats{max-width:1160px;margin:0 auto 25px;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rs-cat{padding:15px;background:#fff;border:1px solid var(--line);border-radius:15px;color:var(--ink);font-weight:850;box-shadow:0 5px 16px #12345a08}.rs-cat small{display:block;color:var(--muted);font-weight:500}
+    .rs-wrap{max-width:1160px;margin:auto;padding:0 20px 42px}.rs-heading{font-size:21px;font-weight:900;margin:20px 0 13px}
+    .main{width:100%!important;float:none!important}.blog-posts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .post-outer-container{margin:0!important;padding:0!important;background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 6px 22px #12345a0b;transition:transform .2s,box-shadow .2s}
+    .post-outer-container:hover{transform:translateY(-3px);box-shadow:0 13px 28px #12345a17}.post{padding:0!important}.post-title{font-size:16px!important;line-height:1.4!important;font-weight:850!important;padding:12px 14px 5px!important;margin:0!important}.post-title a{color:var(--ink)!important}
+    .post-body{padding:12px 15px 18px!important;line-height:1.9}.post-body img{max-width:100%;height:auto;border-radius:13px}.post-snippet,.post-footer,.post-header{color:var(--muted)}
+    .snippet-thumbnail{float:none!important;width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:1/1;overflow:hidden;margin:0!important;background:#eaf2fb}
+    .snippet-thumbnail img{width:100%!important;height:100%!important;object-fit:cover!important}.post-outer-container .post-body{padding:0 13px 12px!important}.post-outer-container .post-body>*:not(.snippet-thumbnail){display:none}.post-outer-container .post-body .snippet-thumbnail{display:block!important}
+    .post-outer-container .post-title{min-height:58px}.post-outer-container .post-footer{padding:0 13px 13px}.jump-link a{display:inline-block;background:linear-gradient(90deg,var(--blue),#00bddd);color:white!important;padding:8px 14px;border-radius:9px;font-weight:850}
+    .item-view .blog-posts{display:block;max-width:900px;margin:auto}.item-view .post-outer-container{padding:22px!important}.item-view .post-outer-container .post-body{display:block!important;padding:12px 0!important}.item-view .post-outer-container .post-body>*{display:revert!important}.item-view .post-title{font-size:29px!important;padding:0 0 12px!important}.item-view .snippet-thumbnail{display:none!important}
+    .blog-pager{display:flex;justify-content:center;gap:12px;margin:28px}.blog-pager a{padding:9px 16px;background:#fff;border:1px solid var(--line);border-radius:10px}
+    .rs-footer{background:var(--navy);color:#dce9f8;padding:28px 20px}.rs-foot{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.rs-footer a{color:#8cefff;margin-inline-start:12px}
+    .rs-backdrop{display:none;position:fixed;inset:0;background:#0009;z-index:100}.rs-drawer{position:fixed;z-index:101;top:0;bottom:0;inset-inline-start:0;width:min(82vw,310px);padding:25px;background:var(--navy);transform:translateX(-110%);transition:transform .25s}.rs-drawer.open{transform:translateX(0)}.rs-backdrop.open{display:block}.rs-drawer a{display:block;border-bottom:1px solid #ffffff20;border-radius:0;padding:13px}
+    @media(max-width:950px){.blog-posts{grid-template-columns:repeat(3,minmax(0,1fr))}.rs-nav a{padding:8px;font-size:13px}.rs-search input{width:115px}}
+    @media(max-width:700px){.rs-head{padding:10px 13px;gap:9px}.rs-menu{display:block}.rs-nav{display:none}.rs-brand{font-size:20px}.rs-actions{margin-inline-start:auto}.rs-search input{width:100px}.rs-hero{padding:0 13px;margin:16px auto}.rs-hero-inner{padding:32px 21px;border-radius:20px}.rs-cats{padding:0 13px;grid-template-columns:repeat(3,1fr);gap:8px}.rs-cat{padding:11px;font-size:13px}.rs-wrap{padding:0 13px 34px}.blog-posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.post-title{font-size:14px!important;padding:10px!important}.post-outer-container .post-footer{padding:0 10px 10px}.item-view .post-outer-container{padding:15px!important}.item-view .post-title{font-size:24px!important}}
+  ]]></b:skin>
+</head>
+<body>
+  <header class='rs-header'>
+    <div class='rs-head'>
+      <button class='rs-menu' id='rsMenu' type='button' aria-label='القائمة'>☰</button>
+      <a class='rs-brand' expr:href='data:blog.homepageUrl'>Rocket<span>Store</span></a>
+      <nav class='rs-nav'>
+        <a expr:href='data:blog.homepageUrl' data-ar='الرئيسية' data-en='Home'>الرئيسية</a>
+        <a href='/search/label/Apps' data-ar='التطبيقات' data-en='Apps'>التطبيقات</a>
+        <a href='/search/label/Games' data-ar='الألعاب' data-en='Games'>الألعاب</a>
+        <a href='/search/label/Tools' data-ar='الأدوات' data-en='Tools'>الأدوات</a>
+        <a href='/search/label/Reviews' data-ar='المراجعات' data-en='Reviews'>المراجعات</a>
+        <a href='/p/about.html' data-ar='من نحن' data-en='About'>من نحن</a>
+      </nav>
+      <div class='rs-actions'>
+        <form class='rs-search' action='/search' method='get'><input name='q' type='search' placeholder='ابحث عن تطبيق أو لعبة' data-ar-placeholder='ابحث عن تطبيق أو لعبة' data-en-placeholder='Search apps or games'/><button type='submit' aria-label='بحث'>⌕</button></form>
+        <button class='rs-lang' id='rsLang' type='button'>English</button>
+      </div>
+    </div>
+  </header>
+  <div class='rs-backdrop' id='rsBackdrop'></div>
+  <nav class='rs-drawer' id='rsDrawer'>
+    <a href='/' data-ar='الرئيسية' data-en='Home'>الرئيسية</a><a href='/search/label/Apps' data-ar='التطبيقات' data-en='Apps'>التطبيقات</a>
+    <a href='/search/label/Games' data-ar='الألعاب' data-en='Games'>الألعاب</a><a href='/search/label/Tools' data-ar='الأدوات' data-en='Tools'>الأدوات</a>
+    <a href='/search/label/Reviews' data-ar='المراجعات' data-en='Reviews'>المراجعات</a><a href='/p/about.html' data-ar='من نحن' data-en='About'>من نحن</a>
+  </nav>
+  <b:if cond='data:view.isHomepage'>
+    <section class='rs-hero'><div class='rs-hero-inner'>
+      <span class='rs-tag'>ROCKETSTORE • APPS &amp; GAMES</span>
+      <h1 data-ar='اكتشف تطبيقاتك وألعابك المفضلة' data-en='Discover apps and games you love'>اكتشف تطبيقاتك وألعابك المفضلة</h1>
+      <p data-ar='تصفح التطبيقات والألعاب، اقرأ التفاصيل والمميزات والمراجعات، وانتقل إلى روابط التنزيل التي يضيفها الناشر.' data-en='Explore apps and games, read their details, features and reviews, and follow download links provided by publishers.'>تصفح التطبيقات والألعاب، اقرأ التفاصيل والمميزات والمراجعات، وانتقل إلى روابط التنزيل التي يضيفها الناشر.</p>
+      <a class='rs-cta' href='/search/label/Apps' data-ar='استكشف التطبيقات ←' data-en='Explore apps →'>استكشف التطبيقات ←</a>
+    </div></section>
+    <section class='rs-cats'>
+      <a class='rs-cat' href='/search/label/Apps'>▣ <span data-ar='التطبيقات' data-en='Apps'>التطبيقات</span><small data-ar='اكتشف تطبيقات جديدة' data-en='Discover new apps'>اكتشف تطبيقات جديدة</small></a>
+      <a class='rs-cat' href='/search/label/Games'>♧ <span data-ar='الألعاب' data-en='Games'>الألعاب</span><small data-ar='اختر لعبتك القادمة' data-en='Find your next game'>اختر لعبتك القادمة</small></a>
+      <a class='rs-cat' href='/search/label/Tools'>⚙ <span data-ar='الأدوات' data-en='Tools'>الأدوات</span><small data-ar='أدوات التطبيقات والألعاب' data-en='App and game tools'>أدوات التطبيقات والألعاب</small></a>
+    </section>
+  </b:if>
+  <main class='rs-wrap'>
+    <b:section id='main' class='main' maxwidgets='1' showaddelement='no'>
+      <b:widget id='Blog1' type='Blog' title='المشاركات' locked='true' version='2' visible='true'/>
+    </b:section>
+  </main>
+  <footer class='rs-footer'><div class='rs-foot'>
+    <div><strong>RocketStore</strong><br/><span data-ar='متجر لاكتشاف التطبيقات والألعاب.' data-en='A place to discover apps and games.'>متجر لاكتشاف التطبيقات والألعاب.</span></div>
+    <div><a href='/p/privacy-policy.html' data-ar='سياسة الخصوصية' data-en='Privacy'>سياسة الخصوصية</a><a href='/p/terms.html' data-ar='الشروط' data-en='Terms'>الشروط</a><a href='/p/contact.html' data-ar='اتصل بنا' data-en='Contact'>اتصل بنا</a></div>
+    <small>© <span id='rsYear'>2026</span> RocketStore</small>
+  </div></footer>
+  <script type='text/javascript'>
+  //<![CDATA[
+  (function(){
+    var d=document,drawer=d.getElementById('rsDrawer'),backdrop=d.getElementById('rsBackdrop'),menu=d.getElementById('rsMenu'),lang=d.getElementById('rsLang');
+    function closeMenu(){drawer.classList.remove('open');backdrop.classList.remove('open');}
+    menu.addEventListener('click',function(){drawer.classList.toggle('open');backdrop.classList.toggle('open');});
+    backdrop.addEventListener('click',closeMenu);drawer.addEventListener('click',function(e){if(e.target.tagName==='A')closeMenu();});
+    d.getElementById('rsYear').textContent=new Date().getFullYear();
+    var current=localStorage.getItem('rocketstore-language')||'ar';
+    function applyLanguage(value){
+      current=value;localStorage.setItem('rocketstore-language',value);
+      d.documentElement.lang=value==='ar'?'ar':'en';d.documentElement.dir=value==='ar'?'rtl':'ltr';
+      d.querySelectorAll('[data-ar][data-en]').forEach(function(el){el.textContent=el.getAttribute(value==='ar'?'data-ar':'data-en');});
+      d.querySelectorAll('[data-ar-placeholder][data-en-placeholder]').forEach(function(el){el.placeholder=el.getAttribute(value==='ar'?'data-ar-placeholder':'data-en-placeholder');});
+      lang.textContent=value==='ar'?'English':'العربية';
+    }
+    lang.addEventListener('click',function(){applyLanguage(current==='ar'?'en':'ar');});applyLanguage(current);
+  })();
+  //]]>
+  </script>
+</body>
+</html>
