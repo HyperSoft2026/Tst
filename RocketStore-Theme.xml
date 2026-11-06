@@ -78,7 +78,7 @@
   <main class='rs-wrap'>
     <b:section id='above-main' class='above-main' maxwidgets='5' showaddelement='yes'/>
     <b:section id='main' class='main' maxwidgets='5' showaddelement='yes'>
-      <b:widget id='Blog1' type='Blog' title='المشاركات - التطبيقات والألعاب' locked='false' version='2' visible='true'/>idget>
+      <b:widget id='Blog1' type='Blog' title='المشاركات - التطبيقات والألعاب' locked='false' version='2' visible='true'/>
     </b:section>
     <b:section id='below-main' class='below-main' maxwidgets='5' showaddelement='yes'/>
     <b:section id='sidebar' class='sidebar' maxwidgets='10' showaddelement='yes'/>
