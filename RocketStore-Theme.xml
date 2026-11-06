@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'
+<html b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'
  xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
  xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
@@ -77,7 +77,38 @@
   </b:if>
   <main class='rs-wrap'>
     <b:section id='main' class='main' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Blog1' type='Blog' title='المشاركات' locked='true' version='2' visible='true'/>
+      <b:widget id='Blog1' type='Blog' title='المشاركات' locked='true' version='2' visible='true'>
+        <b:includable id='main' var='top'>
+          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <h2 class='rs-heading'>أحدث التطبيقات والألعاب</h2>
+          </b:if>
+          <div class='blog-posts hfeed'>
+            <b:loop values='data:posts' var='post'>
+              <article class='post-outer-container'>
+                <b:if cond='data:post.title'>
+                  <h3 class='post-title entry-title'><a expr:href='data:post.url'><data:post.title/></a></h3>
+                </b:if>
+                <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
+                  <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                    <b:if cond='data:post.firstImageUrl'>
+                      <a class='snippet-thumbnail' expr:href='data:post.url'><img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' loading='lazy'/></a>
+                    </b:if>
+                    <div class='post-snippet'><data:post.snippet/></div>
+                    <div class='jump-link'><a expr:href='data:post.url'>عرض التفاصيل</a></div>
+                  <b:else/>
+                    <data:post.body/>
+                  </b:if>
+                </div>
+                <div class='post-footer'><data:post.timestamp/></div>
+              </article>
+            </b:loop>
+          </div>
+          <div class='blog-pager'>
+            <b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'>الأحدث</a></b:if>
+            <b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'>الأقدم</a></b:if>
+          </div>
+        </b:includable>
+      </b:widget>
     </b:section>
   </main>
   <footer class='rs-footer'><div class='rs-foot'>
