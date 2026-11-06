@@ -78,38 +78,7 @@
   <main class='rs-wrap'>
     <b:section id='above-main' class='above-main' maxwidgets='5' showaddelement='yes'/>
     <b:section id='main' class='main' maxwidgets='5' showaddelement='yes'>
-      <b:widget id='Blog1' type='Blog' title='المشاركات - التطبيقات والألعاب' locked='false' version='2' visible='true'>
-        <b:includable id='main' var='top'>
-          <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <h2 class='rs-heading'>أحدث التطبيقات والألعاب</h2>
-          </b:if>
-          <div class='blog-posts hfeed'>
-            <b:loop values='data:posts' var='post'>
-              <article class='post-outer-container'>
-                <b:if cond='data:post.title'>
-                  <h3 class='post-title entry-title'><a expr:href='data:post.url'><data:post.title/></a></h3>
-                </b:if>
-                <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
-                  <b:if cond='data:blog.pageType == &quot;index&quot;'>
-                    <b:if cond='data:post.firstImageUrl'>
-                      <a class='snippet-thumbnail' expr:href='data:post.url'><img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' loading='lazy'/></a>
-                    </b:if>
-                    <div class='post-snippet'><data:post.snippet/></div>
-                    <div class='jump-link'><a expr:href='data:post.url'>عرض التفاصيل</a></div>
-                  <b:else/>
-                    <data:post.body/>
-                  </b:if>
-                </div>
-                <div class='post-footer'><data:post.timestamp/></div>
-              </article>
-            </b:loop>
-          </div>
-          <div class='blog-pager'>
-            <b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'>الأحدث</a></b:if>
-            <b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'>الأقدم</a></b:if>
-          </div>
-        </b:includable>
-      </b:widget>
+      <b:widget id='Blog1' type='Blog' title='المشاركات - التطبيقات والألعاب' locked='false' version='2' visible='true'/>idget>
     </b:section>
     <b:section id='below-main' class='below-main' maxwidgets='5' showaddelement='yes'/>
     <b:section id='sidebar' class='sidebar' maxwidgets='10' showaddelement='yes'/>
