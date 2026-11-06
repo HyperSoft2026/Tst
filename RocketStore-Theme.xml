@@ -10,7 +10,7 @@
   <title><data:blog.pageTitle/></title>
   <b:skin><![CDATA[
     :root{--navy:#071426;--blue:#087BFF;--cyan:#00D8EE;--ink:#17263a;--muted:#68788d;--bg:#f3f7fc;--line:#e4ebf4}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;max-width:100%;overflow-x:hidden;background:var(--bg);color:var(--ink);font:15px/1.7 system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
     a{color:var(--blue);text-decoration:none}.rs-header{position:sticky;top:0;z-index:99;background:rgba(7,20,38,.98);box-shadow:0 5px 22px #07142620;color:#fff}
     .rs-head{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:18px}.rs-brand{font-size:24px;font-weight:950;color:#fff;white-space:nowrap}.rs-brand span{color:var(--cyan)}
     .rs-nav{display:flex;gap:4px;margin-inline-start:auto}.rs-nav a,.rs-drawer a{color:#eaf5ff;padding:9px 11px;border-radius:10px;font-weight:750;font-size:14px}.rs-nav a:hover{background:#087bff35}
@@ -27,12 +27,12 @@
     .post-outer-container:hover{transform:translateY(-3px);box-shadow:0 13px 28px #12345a17}.post{padding:0!important}.post-title{font-size:16px!important;line-height:1.4!important;font-weight:850!important;padding:12px 14px 5px!important;margin:0!important}.post-title a{color:var(--ink)!important}
     .post-body{padding:12px 15px 18px!important;line-height:1.9}.post-body img{max-width:100%;height:auto;border-radius:13px}.post-snippet,.post-footer,.post-header{color:var(--muted)}
     .snippet-thumbnail{float:none!important;width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:1/1;overflow:hidden;margin:0!important;background:#eaf2fb}
-    .snippet-thumbnail img{width:100%!important;height:100%!important;object-fit:cover!important}.post-outer-container .post-body{padding:0 13px 12px!important}.post-outer-container .post-body>*:not(.snippet-thumbnail){display:none}.post-outer-container .post-body .snippet-thumbnail{display:block!important}
+    .snippet-thumbnail img{width:100%!important;height:100%!important;object-fit:cover!important}.post-outer-container .post-body{padding:0 13px 12px!important}.post-outer-container .post-body>*:not(.snippet-thumbnail):not(.jump-link){display:none}.post-outer-container .post-body .snippet-thumbnail{display:block!important}
     .post-outer-container .post-title{min-height:58px}.post-outer-container .post-footer{padding:0 13px 13px}.jump-link a{display:inline-block;background:linear-gradient(90deg,var(--blue),#00bddd);color:white!important;padding:8px 14px;border-radius:9px;font-weight:850}
     .item-view .blog-posts{display:block;max-width:900px;margin:auto}.item-view .post-outer-container{padding:22px!important}.item-view .post-outer-container .post-body{display:block!important;padding:12px 0!important}.item-view .post-outer-container .post-body>*{display:revert!important}.item-view .post-title{font-size:29px!important;padding:0 0 12px!important}.item-view .snippet-thumbnail{display:none!important}
     .blog-pager{display:flex;justify-content:center;gap:12px;margin:28px}.blog-pager a{padding:9px 16px;background:#fff;border:1px solid var(--line);border-radius:10px}
     .rs-footer{background:var(--navy);color:#dce9f8;padding:28px 20px}.rs-foot{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.rs-footer a{color:#8cefff;margin-inline-start:12px}
-    .rs-backdrop{display:none;position:fixed;inset:0;background:#0009;z-index:100}.rs-drawer{position:fixed;z-index:101;top:0;bottom:0;inset-inline-start:0;width:min(82vw,310px);padding:25px;background:var(--navy);transform:translateX(-110%);transition:transform .25s}.rs-drawer.open{transform:translateX(0)}.rs-backdrop.open{display:block}.rs-drawer a{display:block;border-bottom:1px solid #ffffff20;border-radius:0;padding:13px}
+    .rs-backdrop{display:none;position:fixed;inset:0;background:#0009;z-index:100}.rs-drawer{position:fixed;z-index:101;top:0;bottom:0;inset-inline-start:0;width:min(82vw,310px);max-width:100vw;padding:25px;background:var(--navy);transform:translateX(-110%);transition:transform .25s}html[dir='rtl'] .rs-drawer{transform:translateX(110%)}.rs-drawer.open,html[dir='rtl'] .rs-drawer.open{transform:translateX(0)}.rs-backdrop.open{display:block}.rs-drawer a{display:block;border-bottom:1px solid #ffffff20;border-radius:0;padding:13px}
     @media(max-width:950px){.blog-posts{grid-template-columns:repeat(3,minmax(0,1fr))}.rs-nav a{padding:8px;font-size:13px}.rs-search input{width:115px}}
     @media(max-width:700px){.rs-head{padding:10px 13px;gap:9px}.rs-menu{display:block}.rs-nav{display:none}.rs-brand{font-size:20px}.rs-actions{margin-inline-start:auto}.rs-search input{width:100px}.rs-hero{padding:0 13px;margin:16px auto}.rs-hero-inner{padding:32px 21px;border-radius:20px}.rs-cats{padding:0 13px;grid-template-columns:repeat(3,1fr);gap:8px}.rs-cat{padding:11px;font-size:13px}.rs-wrap{padding:0 13px 34px}.blog-posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.post-title{font-size:14px!important;padding:10px!important}.post-outer-container .post-footer{padding:0 10px 10px}.item-view .post-outer-container{padding:15px!important}.item-view .post-title{font-size:24px!important}}
   ]]></b:skin>
@@ -76,8 +76,9 @@
     </section>
   </b:if>
   <main class='rs-wrap'>
-    <b:section id='main' class='main' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Blog1' type='Blog' title='المشاركات' locked='true' version='2' visible='true'>
+    <b:section id='above-main' class='above-main' maxwidgets='5' showaddelement='yes'/>
+    <b:section id='main' class='main' maxwidgets='5' showaddelement='yes'>
+      <b:widget id='Blog1' type='Blog' title='المشاركات - التطبيقات والألعاب' locked='false' version='2' visible='true'>
         <b:includable id='main' var='top'>
           <b:if cond='data:blog.pageType == &quot;index&quot;'>
             <h2 class='rs-heading'>أحدث التطبيقات والألعاب</h2>
@@ -110,6 +111,8 @@
         </b:includable>
       </b:widget>
     </b:section>
+    <b:section id='below-main' class='below-main' maxwidgets='5' showaddelement='yes'/>
+    <b:section id='sidebar' class='sidebar' maxwidgets='10' showaddelement='yes'/>
   </main>
   <footer class='rs-footer'><div class='rs-foot'>
     <div><strong>RocketStore</strong><br/><span data-ar='متجر لاكتشاف التطبيقات والألعاب.' data-en='A place to discover apps and games.'>متجر لاكتشاف التطبيقات والألعاب.</span></div>
